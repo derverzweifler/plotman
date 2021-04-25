@@ -105,10 +105,9 @@ class Job:
             # Parse command line args
             args = self.proc.cmdline()
             assert len(args) > 4
-            assert 'python' in args[0]
-            assert 'chia' in args[1]
-            assert 'plots' == args[2]
-            assert 'create' == args[3]
+            assert 'chia' in args[0]
+            assert 'plots' == args[1]
+            assert 'create' == args[2]
             args_iter = iter(cmdline_argfix(args[4:]))
             for arg in args_iter:
                 val = None if arg in {'-e', '--nobitfield', '-h', '--help', '--override-k'} else next(args_iter)
