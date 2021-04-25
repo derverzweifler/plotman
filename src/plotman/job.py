@@ -108,7 +108,7 @@ class Job:
             assert 'chia' in args[0]
             assert 'plots' == args[1]
             assert 'create' == args[2]
-            args_iter = iter(cmdline_argfix(args[4:]))
+            args_iter = iter(cmdline_argfix(args[3:]))
             for arg in args_iter:
                 val = None if arg in {'-e', '--nobitfield', '-h', '--help', '--override-k'} else next(args_iter)
                 if arg in {'-k', '--size'}:
