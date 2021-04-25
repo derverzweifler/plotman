@@ -27,10 +27,9 @@ def job_phases_for_dstdir(d, all_jobs):
 def is_plotting_cmdline(cmdline):
     return (
         len(cmdline) >= 4
-        and 'python' in cmdline[0]
-        and cmdline[1].endswith('/chia')
-        and 'plots' == cmdline[2]
-        and 'create' == cmdline[3]
+        and 'chia' == cmdline[0]
+        and 'plots' == cmdline[1]
+        and 'create' == cmdline[2]
     )
 
 # This is a cmdline argument fix for https://github.com/ericaltendorf/plotman/issues/41
